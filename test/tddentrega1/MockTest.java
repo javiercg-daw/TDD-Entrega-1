@@ -9,20 +9,28 @@ class MockTest {
     @Test
     void testMetodoMock() {
         // Test A
-        int[][] testArray = new int[][]{{0,0,0},{0,0,0},{0,0,0}};
-        assertEquals(Mock.metodoMock(testArray), 0);
+        int esperado = 0;
+        int[][] testArray = new int[][]{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+        int resultado = Mock.metodoMock(testArray);
+        assertEquals(resultado, esperado);
 
         // Test B
-        testArray = new int[][]{{1,1,1},{1,1,1},{1,1,1}};
-        assertEquals(Mock.metodoMock(testArray), 1);
+        esperado = 1;
+        testArray = new int[][]{{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+        resultado = Mock.metodoMock(testArray);
+        assertEquals(resultado, esperado);
 
         //Test C
-        testArray = new int[][]{{2,1,3},{-1,1,0},{-2,4,1}};
-        assertEquals(Mock.metodoMock(testArray), -3);
+        esperado = -3;
+        testArray = new int[][]{{2, 1, 3}, {-1, 1, 0}, {-2, 4, 1}};
+        resultado = Mock.metodoMock(testArray);
+        assertEquals(resultado, esperado);
 
         //Test D
-        testArray = new int[][]{{2,3,-1},{0,1/2,-1},{-2,1,4}};
-        assertEquals(Mock.metodoMock(testArray), 11);
+        esperado = 11;
+        testArray = new int[][]{{2, 3, -1}, {0, 1 / 2, -1}, {-2, 1, 4}};
+        resultado = Mock.metodoMock(testArray);
+        assertEquals(resultado, esperado);
     }
 
 }
