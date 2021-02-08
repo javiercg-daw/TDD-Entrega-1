@@ -17,13 +17,16 @@ public class Mock {
         } else {
             return -1;
         }
-
     }
 
     public static int[] k(int[][] entrada) {
-        if (Arrays.deepEquals(entrada, new int[][]{{3, 2, 1, 1}, {5, 3, 4, 2}, {1, 1, -1, 1}})) {
+        if (Arrays.deepEquals(
+                entrada, new int[][]{{3, 2, 1, 1}, {5, 3, 4, 2}, {1, 1, -1, 1}}
+        )) {
             return new int[]{-4, 6, 1};
-        } else if (Arrays.deepEquals(entrada, new int[][]{{1, 1, 1, 34 / 15}, {1, -1, 1, -16 / 15}, {5, 3, -1, 8}})) {
+        } else if (Arrays.deepEquals(
+                entrada, new int[][]{{1, 1, 1, 34 / 15}, {1, -1, 1, -16 / 15}, {5, 3, -1, 8}}
+        )) {
             return new int[]{3 / 5, 5 / 3, 0};
         } else {
             return new int[]{-1};
