@@ -28,15 +28,15 @@ class DeterminantesTest {
 
     @ParameterizedTest
     @MethodSource("parametrosTestK")
-    void testK(int[][] testArray, double[] esperado) {
+    void testK(double[][] testArray, double[] esperado) {
         double[] resultado = Determinantes.k(testArray);
         assertArrayEquals(resultado, esperado);
     }
 
     private static Stream<Arguments> parametrosTestK() {
         return Stream.of(
-                Arguments.of(new int[][]{{3, 2, 1, 1}, {5, 3, 4, 2}, {1, 1, -1, 1}}, new int[]{-4, 6, 1}),
-                Arguments.of(new int[][]{{1, 1, 1, 34 / 15}, {1, -1, 1, -16 / 15}, {5, 3, -1, 8}}, new int[]{3 / 5, 5 / 3, 0})
+                Arguments.of(new double[][]{{3, 2, 1, 1}, {5, 3, 4, 2}, {1, 1, -1, 1}}, new double[]{-4, 6, 1}),
+                Arguments.of(new double[][]{{1, 1, 1, 34.0 / 15.0}, {1, -1, 1, -16.0 / 15.0}, {5, 3, -1, 8}}, new double[]{3.0 / 5.0, 5.0 / 3.0, -7.401486830834377E-17})
         );
     }
 
