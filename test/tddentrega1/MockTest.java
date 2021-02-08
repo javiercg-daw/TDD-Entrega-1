@@ -33,4 +33,19 @@ class MockTest {
         assertEquals(resultado, esperado);
     }
 
+    @Test
+    void testK() {
+        // Test A
+        int[] esperado = {-4, 6, 1};
+        int[][] testArray = new int[][]{{3, 2, 1, 1}, {5, 3, 4, 2}, {1, 1, -1, 1}};
+        int[] resultado = Mock.k(testArray);
+        assertArrayEquals(resultado, esperado);
+
+        // Test B
+        esperado = new int[]{3 / 5, 5 / 3, 0};
+        testArray = new int[][]{{1, 1, 1, 34 / 15}, {1, -1, 1, -16 / 15}, {5, 3, -1, 8}};
+        resultado = Mock.k(testArray);
+        assertArrayEquals(resultado, esperado);
+    }
+
 }
